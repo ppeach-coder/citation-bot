@@ -1,13 +1,7 @@
 function ValidateForm() {
   var botPage = document.getElementById("botPage");
   var botCat = document.getElementById("botCat");
-  var submitButton; // From StackOverflow user3126867
-  if (typeof event.explicitOriginalTarget !== "undefined") {
-    submitButton = event.explicitOriginalTarget;
-  } else if(typeof document.activeElement.value !== "undefined"){  // IE
-    submitButton = document.activeElement;
-  }
-
+  
   if (submitButton.id === "PageSubmit") {
     if (botPage.value.trim() === "") {
       botPage.classList.add("error");
