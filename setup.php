@@ -24,8 +24,6 @@ if (TRAVIS || isset($argv)) {
 }
 
 // This is needed because the Gadget API expects only JSON back, therefore ALL output from the citation bot is thrown away
-if (strpos((string) @$_SERVER['PHP_SELF'], '/gadgetapi.php') === FALSE) {
-  define("FLUSHING_OKAY", TRUE);
 } else {
   define("FLUSHING_OKAY", FALSE);
 }
